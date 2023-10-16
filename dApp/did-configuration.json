@@ -16,7 +16,7 @@
       ],
       "credentialSubject": {
         "id": "did:kilt:4skimcqA5SDHsp4K6XM6nQVZSuCPAixbjW6MUok6e5uJqtuf",
-        "origin": "k51qzi5uqu5dgc8i5qnkekapxy8z7ly0xa41lq6r3932v7cyd2qwgkkzjmei64",
+        "origin": "qqqq",
         "rootHash": "0x1ae80ae43e878eef5567c6f766f7e66dc6e7e95f9a5d3f463075417cf2b18082"
       },
       "proof": {

@@ -15,7 +15,7 @@ jobs:
 
       - name: Crust IPFS uploader action
         id: pin
-        uses: Retamogordo/crust-ipns-upload@v0.0.3
+        uses: XcavateBlockchain/crust-ipns-upload@v0.0.1
         with:
           path: './dApp'
           seeds: ${{ secrets.CRUST_SEEDS }}
