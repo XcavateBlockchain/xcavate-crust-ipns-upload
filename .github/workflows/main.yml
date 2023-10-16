@@ -1,0 +1,45 @@
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: Testing on Crust IPFS uploader
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Crust IPFS uploader action
+        id: pin
+        uses: Retamogordo/crust-ipns-upload@v0.0.3
+        with:
+          path: './dApp'
+          seeds: ${{ secrets.CRUST_SEEDS }}
+      - name: Upload success
+        run: |
+          echo "Now, you can access with 'https://crustipfs.xyz/ipfs/${{ steps.pin.outputs.ipfs_cid }}'"
+          echo "IPNS name: ${{ steps.pin.outputs.ipns_name }}"
+            
+      - name: Update DID Configuration JSON
+        uses: sergeysova/jq-action@v2
+        with:
+          cmd: jq '.linked_dids[].credentialSubject.origin = "https://ipfs.io/ipns/${{ steps.pin.outputs.ipns_name }}"' ./dApp/did-configuration.json > tmp.json && mv tmp.json ./dApp/did-configuration.json
+      
+      - name: Commit changes
+        run: |
+          git config --local user.name "Retamogordo"
+          git config --local user.email "yury.yukhananov@tutanota.com"
+
+          git add -A
+          git commit -m "update DID Configuration JSON with origin from IPNS"
+      
+      - name: Push changes 
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true

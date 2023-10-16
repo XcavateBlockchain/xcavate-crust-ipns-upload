@@ -1,0 +1,28 @@
+name: 'Crust IPFS Upload'
+description: 'Upload your site to IPFS W3Auth Gateway'
+author: 'crust'
+branding:
+  icon: 'upload'
+  color: 'gray-dark'
+
+inputs:
+  path:
+    description: 'Path to directory which should be sent to gateway'
+    required: true
+  seeds:
+    description: 'Substrate-based chain secret seeds'
+    required: true
+  gateway:
+    description: 'IPFS gateway which support web3 authentication'
+  crust-endpoint:
+    description: 'Crust Chain websocket endpoint'
+    required: false
+    default: 'wss://rpc.crust.network'
+
+outputs:
+  hash:
+    description: 'Uploaded IPFS cid(CIDv0) hash value'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
