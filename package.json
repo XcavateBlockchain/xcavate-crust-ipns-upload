@@ -1,6 +1,6 @@
 {
-  "name": "crust-ipns-upload",
-  "version": "0.0.1",
+  "name": "xcavate-crust-ipns-upload",
+  "version": "0.0.2",
   "description": "Upload a static website to IPFS W3Auth gateway",
   "main": "dist/index.js",
   "scripts": {
