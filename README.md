@@ -1,23 +1,32 @@
-# Crust IPFS Upload action
+# Crust IPFS/IPNS Upload action
+Uploads the contents of ```./dApp``` folder to IPFS, updates ```./dApp/public/.well-known/did-configuration.json```
+to point "credentialSubject: origin" to the IPNS ID.
+Based mostly on 
+crustio/ipfs-upload-action
+crustio/ipfs-crust-action.
+Please refer to above repositories for further information.
+## Repository Settings
+### CRUST_SEEDS
+The repository must have CRUST_SEEDS secret set to your Crust seeds
 
-This action upload your website to IPFS through [IPFS W3Auth Gateway](https://wiki.crust.network/docs/en/buildIPFSWeb3AuthGW)
+### Actions Permissions
+Repository's Actions must have Read & Write Permissions set
 
+### Tag
+Must correspond to the version in ```package.json```.
 
-## Inputs
+## Compiling
+### Node version
+This code was only tried to compile under node version v14.21.3.
+If you change the script and need to recompile it make sure you upgrade the
+version number in ```package.json``` and create a new tag in the repository
+such that the tag corresponds to the version in ```package.json```.
+Example: v0.0.3
 
-### `path`
-
-**Required** Path to directory sent to IPFS
-
-### `seeds`
-
-**Required** Substrate-based chain secret seeds, which support:
-
-- [Crust](https://apps.crust.network/#/accounts): Please go to Crust Apps to get seeds
-- [Polkadot](https://polkadot.js.org/apps/#/accounts): Please go to Polkadot Apps to get seeds
-- [Kusama](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/accounts): Please go to Kusama Apps to get seeds
-- More substrate based chains
-
-### `gateway`
-
-*Optional*, IPFS Public Gateway which support W3Auth, default is `https://crustipfs.xyz`
+```sh
+nvm use 14.21.3
+node --version
+npm run build
+```
+There are numerous warnings about multiple/deprecated packages,
+however I had tough time repairing broken dependencies after trying to dedupe.
