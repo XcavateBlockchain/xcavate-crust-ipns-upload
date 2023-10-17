@@ -1,0 +1,12 @@
+import React from 'react'
+
+const DoubleArrowSvgIcon = ({width = 15, height = 16, color = '#151719', opacity = 0.8}) => {
+  return (
+    <svg width={width} height={height} viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fillRule="evenodd" clipRule="evenodd" d="M14.089 8.43514C14.3294 8.19482 14.3294 7.80518 14.089 7.56486L6.70443 0.180241C6.46411 -0.0600815 6.07447 -0.0600815 5.83414 0.180241C5.59382 0.420565 5.59382 0.810204 5.83414 1.05053L12.7836 8L5.83414 14.9495C5.59382 15.1898 5.59382 15.5794 5.83414 15.8198C6.07447 16.0601 6.46411 16.0601 6.70443 15.8198L14.089 8.43514Z" fill={color} fillOpacity={opacity} />
+      <path fillRule="evenodd" clipRule="evenodd" d="M9.16595 8.43514C9.40627 8.19482 9.40627 7.80518 9.16595 7.56486L1.78133 0.180241C1.54101 -0.0600815 1.15137 -0.0600815 0.911049 0.180241C0.670726 0.420565 0.670726 0.810204 0.911049 1.05053L7.86052 8L0.911049 14.9495C0.670726 15.1898 0.670726 15.5794 0.911049 15.8198C1.15137 16.0601 1.54101 16.0601 1.78133 15.8198L9.16595 8.43514Z" fill={color} fillOpacity={opacity} />
+    </svg>
+  )
+}
+
+export default DoubleArrowSvgIcon

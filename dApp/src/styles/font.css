@@ -1,0 +1,146 @@
+@import "tailwindcss/base";
+@layer base {
+    @font-face {
+        font-family: 'GraphikBlack';
+        src: url('./fonts/Graphik/GraphikBlack.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GraphikBlackItalic';
+        src: url('./fonts/Graphik/GraphikBlackItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'GraphikSuper';
+        src: url('./fonts/Graphik/GraphikSuper.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GraphikSuperItalic';
+        src: url('./fonts/Graphik/GraphikSuperItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'GraphikBold';
+        src: url('./fonts/Graphik/GraphikBold.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GraphikBoldItalic';
+        src: url('./fonts/Graphik/GraphikBoldItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'GraphikSemibold';
+        src: url('./fonts/Graphik/GraphikSemibold.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GraphikSemiboldItalic';
+        src: url('./fonts/Graphik/GraphikSemiboldItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'GraphikMedium';
+        src: url('./fonts/Graphik/GraphikMedium.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GraphikMediumItalic';
+        src: url('./fonts/Graphik/GraphikMediumItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'GraphikRegular';
+        src: url('./fonts/Graphik/GraphikRegular.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GraphikRegularItalic';
+        src: url('./fonts/Graphik/GraphikRegularItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'GraphikLight';
+        src: url('./fonts/Graphik/GraphikLight.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GraphikLightItalic';
+        src: url('./fonts/Graphik/GraphikLightItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'GraphikExtraLight';
+        src: url('./fonts/Graphik/GraphikExtralight.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GraphikExtraLightItalic';
+        src: url('./fonts/Graphik/GraphikExtralightItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'GraphikThin';
+        src: url('./fonts/Graphik/GraphikThin.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GraphikThinItalic';
+        src: url('./fonts/Graphik/GraphikThinItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'DMSansBold';
+        src: url('./fonts/DMSans/DMSans-Bold.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'DMSansBoldItalic';
+        src: url('./fonts/DMSans/DMSans-BoldItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'DMSansMedium';
+        src: url('./fonts/DMSans/DMSans-Medium.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'DMSansMediumItalic';
+        src: url('./fonts/DMSans/DMSans-MediumItalic.woff2') format('woff2');
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'DMSansRegular';
+        src: url('./fonts/DMSans/DMSans-Regular.woff2') format('woff2');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'DMSansRegularItalic';
+        src: url('./fonts/DMSans/DMSans-Italic.woff2') format('woff2');
+        font-style: italic;
+    }
+}

@@ -27,7 +27,7 @@ jobs:
       - name: Update DID Configuration JSON
         uses: sergeysova/jq-action@v2
         with:
-          cmd: jq '.linked_dids[].credentialSubject.origin = "https://ipfs.io/ipns/${{ steps.pin.outputs.ipns_name }}"' ./dApp/did-configuration.json > tmp.json && mv tmp.json ./dApp/did-configuration.json
+          cmd: jq '.linked_dids[].credentialSubject.origin = "https://ipfs.io/ipns/${{ steps.pin.outputs.ipns_name }}"' ./dApp/public/.well-known/did-configuration.json > tmp.json && mv tmp.json ./dApp/public/.well-known/did-configuration.json
       
       - name: Commit changes
         run: |
