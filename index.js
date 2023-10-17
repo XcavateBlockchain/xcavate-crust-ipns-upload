@@ -11,7 +11,7 @@ const { checkSeeds, sendTx } = require('./util');
 async function main() {
     // 1. Get all inputs
     let path = core.getInput('path') || "./dApp";
-    const seeds = core.getInput('seeds');
+    const seeds = core.getInput('seeds') || "success sick foil end pig husband april output rack thing pink wreck";
     const ipfsGateway = core.getInput('gateway') || 'https://crustipfs.xyz';
 
     // 2. Check path and convert path
